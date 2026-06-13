@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy, Terms of Use, and Advertising Disclosures for {{APP_NAME}}.">
+    <title>{{APP_NAME}} - Privacy Policy & Terms of Use</title>
+    <style>
+        :root {
+            --bg-color-light: #ffffff;
+            --text-color-light: #333333;
+            --link-color-light: #0056b3;
+            --sidebar-bg-light: #f4f4f4;
+            --border-color-light: #dddddd;
+
+            --bg-color-dark: #1a1a1a;
+            --text-color-dark: #e0e0e0;
+            --link-color-dark: #66b2ff;
+            --sidebar-bg-dark: #2a2a2a;
+            --border-color-dark: #444444;
+
+            --bg-color: var(--bg-color-light);
+            --text-color: var(--text-color-light);
+            --link-color: var(--link-color-light);
+            --sidebar-bg: var(--sidebar-bg-light);
+            --border-color: var(--border-color-light);
+            
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: var(--bg-color-dark);
+                --text-color: var(--text-color-dark);
+                --link-color: var(--link-color-dark);
+                --sidebar-bg: var(--sidebar-bg-dark);
+                --border-color: var(--border-color-dark);
+            }
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            background-color: var(--sidebar-bg);
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        footer {
+            border-top: 1px solid var(--border-color);
+            border-bottom: none;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: auto;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.95em;
+            display: block;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(150, 150, 150, 0.2);
+            color: var(--link-color);
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            box-sizing: border-box;
+            max-width: 900px;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--text-color);
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 { margin-top: 0; font-size: 2.2em; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        h2 { font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+        h3 { font-size: 1.4em; }
+
+        p, ul, ol {
+            margin-bottom: 1.5em;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: gray;
+            margin-bottom: 2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+        
+        @media print {
+            .sidebar, header, footer { display: none; }
+            .content { padding: 0; max-width: 100%; }
+            body { background-color: #fff; color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>{{APP_NAME}} - Legal & Privacy Center</h1>
+    <div class="last-updated">Effective Date: {{EFFECTIVE_DATE}} | Last Updated: {{LAST_UPDATED}}</div>
+</header>
+
+<div class="container">
+    <nav class="sidebar" aria-label="Table of Contents">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#privacy-policy">1. Privacy Policy</a></li>
+            <li><a href="#terms-of-use">2. Terms of Use</a></li>
+            <li><a href="#terms-and-conditions">3. Terms and Conditions</a></li>
+            <li><a href="#admob-disclosure">4. AdMob Advertising Disclosure</a></li>
+            <li><a href="#gdpr-compliance">5. GDPR Compliance</a></li>
+            <li><a href="#uk-gdpr-compliance">6. UK GDPR Compliance</a></li>
+            <li><a href="#ccpa-compliance">7. CCPA Compliance</a></li>
+            <li><a href="#cpra-compliance">8. CPRA Compliance</a></li>
+            <li><a href="#coppa-compliance">9. COPPA Compliance</a></li>
+            <li><a href="#pipeda-compliance">10. PIPEDA Compliance</a></li>
+            <li><a href="#lgpd-compliance">11. LGPD Compliance</a></li>
+            <li><a href="#user-consent-management">12. User Consent Management</a></li>
+            <li><a href="#user-messaging-platform">13. User Messaging Platform (UMP)</a></li>
+            <li><a href="#consent-withdrawal">14. Consent Withdrawal Procedures</a></li>
+            <li><a href="#data-collection">15. Data Collection Practices</a></li>
+            <li><a href="#data-processing">16. Data Processing Activities</a></li>
+            <li><a href="#data-retention">17. Data Retention Policy</a></li>
+            <li><a href="#data-sharing">18. Data Sharing & Third Parties</a></li>
+            <li><a href="#analytics-services">19. Analytics Services</a></li>
+            <li><a href="#advertising-services">20. Advertising Services</a></li>
+            <li><a href="#firebase-services">21. Firebase Services</a></li>
+            <li><a href="#crash-reporting">22. Crash Reporting Services</a></li>
+            <li><a href="#device-permissions">23. Device Permissions Disclosure</a></li>
+            <li><a href="#cookies-policy">24. Cookies Policy</a></li>
+            <li><a href="#local-storage">25. Local Storage Disclosure</a></li>
+            <li><a href="#tracking-technologies">26. Tracking Technologies</a></li>
+            <li><a href="#personalized-advertising">27. Personalized Advertising</a></li>
+            <li><a href="#non-personalized-advertising">28. Non-Personalized Advertising</a></li>
+            <li><a href="#childrens-privacy">29. Children's Privacy</a></li>
+            <li><a href="#age-restrictions">30. Age Restrictions</a></li>
+            <li><a href="#international-data-transfers">31. International Data Transfers</a></li>
+            <li><a href="#security-measures">32. Security Measures</a></li>
+            <li><a href="#user-rights">33. User Rights</a></li>
+            <li><a href="#data-access">34. Data Access Requests</a></li>
+            <li><a href="#data-deletion">35. Data Deletion Requests</a></li>
+            <li><a href="#data-correction">36. Data Correction Requests</a></li>
+            <li><a href="#contact-information">37. Contact Information</a></li>
+            <li><a href="#policy-changes">38. Policy Change Notifications</a></li>
+            <li><a href="#legal-disclaimer">39. Legal Disclaimer</a></li>
+            <li><a href="#governing-law">40. Governing Law</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+        <section id="privacy-policy">
+            <h2>1. Privacy Policy</h2>
+            <p>Welcome to {{APP_NAME}} provided by {{COMPANY_NAME}}. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website or use our application (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.</p>
+        </section>
+
+        <section id="terms-of-use">
+            <h2>2. Terms of Use</h2>
+            <p>By accessing and using {{APP_NAME}}, you accept and agree to be bound by the terms and provisions of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+        </section>
+
+        <section id="terms-and-conditions">
+            <h2>3. Terms and Conditions</h2>
+            <p>These terms and conditions outline the rules and regulations for the use of {{COMPANY_NAME}}'s Application, {{APP_NAME}}. By accessing this application we assume you accept these terms and conditions. Do not continue to use {{APP_NAME}} if you do not agree to take all of the terms and conditions stated on this page.</p>
+        </section>
+
+        <section id="admob-disclosure">
+            <h2>4. AdMob Advertising Disclosure</h2>
+            <p>We use Google AdMob to serve advertisements within {{APP_NAME}}. AdMob is an advertising service provided by Google LLC. AdMob may use device identifiers, cookies, and similar technologies to collect data about your device and app usage to serve personalized or non-personalized ads. We implement Google's User Messaging Platform (UMP) and participate in Google Consent Mode to capture and respect your advertisement preferences.</p>
+        </section>
+
+        <section id="gdpr-compliance">
+            <h2>5. GDPR Compliance</h2>
+            <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights under the General Data Protection Regulation (GDPR). {{COMPANY_NAME}} aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data. We rely on your consent, fulfillment of a contract, and legitimate interests as lawful bases for processing your data.</p>
+        </section>
+
+        <section id="uk-gdpr-compliance">
+            <h2>6. UK GDPR Compliance</h2>
+            <p>Users residing in the United Kingdom are protected under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Your rights regarding data access, rectification, portability, and erasure mirror those established by the EU GDPR. We mandate explicitly managed consent workflows for all ad-tracking and analytics utilizing UK users' hardware identifiers.</p>
+        </section>
+
+        <section id="ccpa-compliance">
+            <h2>7. CCPA Compliance</h2>
+            <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to request disclosure regarding the categories and specific pieces of personal information collected, the sources of information, the business or commercial purpose for collecting or selling the information, and the categories of third parties with whom the information is shared. We do not sell your personal information as defined conventionally, except where directed by your ad preferences.</p>
+        </section>
+
+        <section id="cpra-compliance">
+            <h2>8. CPRA Compliance</h2>
+            <p>Expanding on the CCPA, the California Privacy Rights Act (CPRA) grants users rights to correct inaccurate personal data and limit the use of sensitive personal information. {{APP_NAME}} complies with CPRA requirements by providing mechanisms to opt out of the sharing of personal information for cross-context behavioral advertising.</p>
+        </section>
+
+        <section id="coppa-compliance">
+            <h2>9. COPPA Compliance</h2>
+            <p>The Children's Online Privacy Protection Act (COPPA) places primary control in the hands of parents concerning the online collection of information from children under 13. We do not knowingly collect, use, or disclose personal information from children under 13 without verifiable parental consent. If we discover we have inadvertently collected such data, we will delete it promptly.</p>
+        </section>
+
+        <section id="pipeda-compliance">
+            <h2>10. PIPEDA Compliance</h2>
+            <p>In Canada, the Personal Information Protection and Electronic Documents Act (PIPEDA) governs how private sector organizations collect, use, and disclose personal information. We obtain consent when required and ensure that personal information is only used for the purposes for which it was collected, safeguarding your digital footprint.</p>
+        </section>
+
+        <section id="lgpd-compliance">
+            <h2>11. LGPD Compliance</h2>
+            <p>Brazil’s Lei Geral de Proteção de Dados (LGPD) establishes rules on the collection, handling, storing, and sharing of personal data. Users in Brazil have the right to confirm the existence of data processing, access data, correct incomplete or inaccurate data, and revoke consent. Our CMP facilitates adherence to these statutory requirements.</p>
+        </section>
+
+        <section id="user-consent-management">
+            <h2>12. User Consent Management</h2>
+            <p>We believe in transparent data practices. Upon first accessing {{APP_NAME}}, and periodically thereafter, you will interact with our Consent Management Platform (CMP). This interface allows you to explicitly grant, deny, or configure your consent preferences regarding tracking technologies, personalized advertising, and analytics.</p>
+        </section>
+
+        <section id="user-messaging-platform">
+            <h2>13. User Messaging Platform (UMP)</h2>
+            <p>To adhere to global privacy frameworks, notably IAB Europe's Transparency and Consent Framework (TCF) v2.2, {{APP_NAME}} utilizes the Google User Messaging Platform (UMP) SDK. This ensures compliant, standardized consent collection and signaling to Google AdMob and affiliated ad tech providers representing your explicit instruction.</p>
+        </section>
+
+        <section id="consent-withdrawal">
+            <h2>14. Consent Withdrawal Procedures</h2>
+            <p>You reserve the ultimate right to withdraw your consent at any time. You may revoke consent for personalized advertising and data tracking by accessing the 'Privacy Settings' or 'Ad Preferences' menu directly within {{APP_NAME}}. Re-configuring these settings will prompt the UMP to reflect your updated status globally across our advertising network integrations.</p>
+        </section>
+
+        <section id="data-collection">
+            <h2>15. Data Collection Practices</h2>
+            <p>We may collect, use, store and transfer different kinds of personal data about you. This includes Technical Data (IP address, device type, operating system version), Usage Data (how you use our app), and Profile Data (preferences, feedback). We utilize this data strictly for maintaining service functionality, improving user experience, and providing relevant content.</p>
+        </section>
+
+        <section id="data-processing">
+            <h2>16. Data Processing Activities</h2>
+            <p>Your data is processed in a manner that ensures appropriate security. Processing activities include the automated decision making required for serving contextual or personalized advertisements, diagnosing crash reports, monitoring application performance parameters, and ensuring the technical stability of {{APP_NAME}}.</p>
+        </section>
+
+        <section id="data-retention">
+            <h2>17. Data Retention Policy</h2>
+            <p>We will only retain your personal data for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements. Analytic and crash data is typically heavily anonymized and retained temporarily according to standard industry lifecycles.</p>
+        </section>
+
+        <section id="data-sharing">
+            <h2>18. Data Sharing & Third Parties</h2>
+            <p>We may share your Personal Data with internal third parties (such as affiliated companies) and external third parties (such as service providers acting as processors who provide IT and system administration services, and authorized advertising partners like Google). We require all third parties to respect the security of your personal data and to treat it in accordance with the law.</p>
+        </section>
+
+        <section id="analytics-services">
+            <h2>19. Analytics Services</h2>
+            <p>We use third-party Service Providers to monitor and analyze the use of our Service. Specifically, Google Analytics is used to track and report application traffic. This data is shared with other Google services and may be used to contextualize and personalize the ads of its own advertising network.</p>
+        </section>
+
+        <section id="advertising-services">
+            <h2>20. Advertising Services</h2>
+            <p>Through our integration with Google AdMob, third-party vendors and ad networks may serve ads on {{APP_NAME}}. These vendors use cookies and device identifiers to serve ads based on your prior use of our app or other apps/websites. You may opt out of personalized advertising by managing your preferences through our UMP dialog or your device settings.</p>
+        </section>
+
+        <section id="firebase-services">
+            <h2>21. Firebase Services</h2>
+            <p>{{APP_NAME}} leverages Google Firebase for essential infrastructure functioning. This may include Firebase Authentication for secure sign-in, Cloud Firestore for database management, Firebase Cloud Messaging for notifications, and Remote Config for dynamic app updates. Firebase acts as a data processor under strict data processing agreements.</p>
+        </section>
+
+        <section id="crash-reporting">
+            <h2>22. Crash Reporting Services</h2>
+            <p>To assure a reliable experience, we use Firebase Crashlytics to report app crashes. When a crash occurs, specific log data (such as device state, stack traces, and operating system version) is transmitted to identify and resolve the software defect. This data is strongly pseudonymized and does not directly identify you.</p>
+        </section>
+
+        <section id="device-permissions">
+            <h2>23. Device Permissions Disclosure</h2>
+            <p>{{APP_NAME}} may request certain device permissions (such as network access, storage, or notifications) to function correctly. These permissions are explicitly requested via your operating system. You may revoke these permissions at any time via your device's settings menu, though this may limit some application functionalities.</p>
+        </section>
+
+        <section id="cookies-policy">
+            <h2>24. Cookies Policy</h2>
+            <p>While mobile applications do not use traditional 'cookies' in the same manner as web browsers, {{APP_NAME}} and related web portals utilize equivalent tracking technologies. These technologies are employed to maintain session states, store user preferences, and facilitate targeted advertising features. You can instruct your device to refuse all tracking data.</p>
+        </section>
+
+        <section id="local-storage">
+            <h2>25. Local Storage Disclosure</h2>
+            <p>We utilize local device storage (such as SQLite databases or SharedPreferences/NSUserDefaults) to cache data intended to speed up app load times and support offline functionality. This locally stored data is sandboxed by the operating system and is generally removed when you uninstall the application or clear your app data.</p>
+        </section>
+
+        <section id="tracking-technologies">
+            <h2>26. Tracking Technologies</h2>
+            <p>We use tracking technologies such as web beacons, tags, and scripts to collect and track information and to improve and analyze our Service. Advertising Identifiers (such as Google Advertising ID or Apple IDFA) are specifically utilized, subject to your consent, to deliver relevant promotional content.</p>
+        </section>
+
+        <section id="personalized-advertising">
+            <h2>27. Personalized Advertising</h2>
+            <p>If you explicitly grant consent, our ad partners will utilize your device identifier, location data, and demographic profile to display personalized advertisements that are more relevant to your interests. This profile is built across multiple sites and apps. You may withdraw this authorization at any time.</p>
+        </section>
+
+        <section id="non-personalized-advertising">
+            <h2>28. Non-Personalized Advertising</h2>
+            <p>If you decline consent for personalized advertising, you will still see advertisements within {{APP_NAME}}. However, these will be non-personalized. Non-personalized ads are targeted using contextual information rather than your past behavior, but may still utilize limited identifiers to combat fraud and cap ad frequency.</p>
+        </section>
+
+        <section id="childrens-privacy">
+            <h2>29. Children's Privacy</h2>
+            <p>Our Service does not address anyone under the age of 13 objectively, nor do we configure our advertising networks to serve personalized ads to users known to be minors. If you are a parent or guardian and you are aware that your Children have provided us with Personal Data, please contact us immediately.</p>
+        </section>
+
+        <section id="age-restrictions">
+            <h2>30. Age Restrictions</h2>
+            <p>You must be at least 13 years of age to use {{APP_NAME}}. Depending on your jurisdiction, if you are under the age of digital consent (e.g., 16 in certain EU member states), you must obtain parental authorization before using this application, specifically concerning the processing of data for advertising purposes.</p>
+        </section>
+
+        <section id="international-data-transfers">
+            <h2>31. International Data Transfers</h2>
+            <p>Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ. We ensure that appropriate safeguards, such as Standard Contractual Clauses, are in place under global privacy regulations when such transfers occur.</p>
+        </section>
+
+        <section id="security-measures">
+            <h2>32. Security Measures</h2>
+            <p>The security of your data is important to us. We have put in place appropriate technical and organizational security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed, including end-to-end encryption in transit (HTTPS/TLS) and secure database architectures.</p>
+        </section>
+
+        <section id="user-rights">
+            <h2>33. User Rights</h2>
+            <p>Depending on your location, you may have rights under applicable data protection laws. These may include the right to request access, correction, erasure, restriction, transfer, or to object to processing. You also have the right to lodge a complaint with a supervisory data protection authority concerning our data processing actions.</p>
+        </section>
+
+        <section id="data-access">
+            <h2>34. Data Access Requests</h2>
+            <p>You have the right to request a copy of the personal data we hold about you. To exercise this right, please contact us using the information provided below. We may require specific information from you to help us configure and verify your identity ensuring secure disclosure of the requested records.</p>
+        </section>
+
+        <section id="data-deletion">
+            <h2>35. Data Deletion Requests</h2>
+            <p>You have the right to ask us to delete or remove personal data where there is no good reason for us continuing to process it. You can initiate an account deletion or data erasure request directly from within the app settings or by contacting our data protection team via email.</p>
+        </section>
+
+        <section id="data-correction">
+            <h2>36. Data Correction Requests</h2>
+            <p>It is important that the personal data we hold about you is accurate and current. You hold the right to request the correction of incomplete or inaccurate data we hold about you. You can typically update your primary information directly within your account profile interface.</p>
+        </section>
+
+        <section id="contact-information">
+            <h2>37. Contact Information</h2>
+            <p>If you have any questions about this Privacy Policy & Terms of Use, the practices of this platform, or your dealings with the application, please contact our Data Protection Officer:</p>
+            <ul>
+                <li>By email: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a></li>
+                <li>For Legal inquiries: <a href="mailto:{{LEGAL_EMAIL}}">{{LEGAL_EMAIL}}</a></li>
+                <li>For Privacy specific inquiries: <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a></li>
+                <li>Address: {{CONTACT_ADDRESS}}</li>
+            </ul>
+        </section>
+
+        <section id="policy-changes">
+            <h2>38. Policy Change Notifications</h2>
+            <p>We may update our Privacy Policy and Terms of Use from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Effective Date" at the top. You are advised to review this page periodically for any changes. Changes are effective when they are posted.</p>
+        </section>
+
+        <section id="legal-disclaimer">
+            <h2>39. Legal Disclaimer</h2>
+            <p>The material provided in {{APP_NAME}} is for general informational purposes only. While we endeavor to keep the information up-to-date and correct, {{COMPANY_NAME}} makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the app or the information.</p>
+        </section>
+
+        <section id="governing-law">
+            <h2>40. Governing Law</h2>
+            <p>These terms and conditions are governed by and construed in accordance with the laws of {{COUNTRY}}, and you irrevocably submit to the exclusive jurisdiction of the courts in that location or state. Legal disputes arising out of the use of {{APP_NAME}} will be resolved under these jurisdictional statutes.</p>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2024 {{COMPANY_NAME}}. All Rights Reserved. {{APP_NAME}} is a trademark of {{COMPANY_NAME}}.</p>
+</footer>
+
+</body>
+</html>
